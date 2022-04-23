@@ -8,6 +8,14 @@ public class SpringContextExample {
 
         HelloWorld hw = ctx.getBean("myHelloWorld", HelloWorld.class);
         hw.sayHi();
+        hw.greet();
+        hw.greetOther("Karolina");
+        hw.greetOther("Ola");
+
+        HelloWorld matiHw = ctx.getBean("matiWorld", HelloWorld.class);
+        matiHw.greetOther("Karlos");
+        matiHw.greetInCity();
+
         ctx.close();
     }
 }

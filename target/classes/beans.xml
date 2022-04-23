@@ -2,5 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="myHelloWorld" class="pl.coderslab.spring.HelloWorld"></bean>
+    <bean id="myHelloWorld" class="pl.coderslab.spring.HelloWorld">
+        <constructor-arg value="Karlos"/>
+    </bean>
+<bean id="Berlin" class="pl.coderslab.spring.City">
+    <constructor-arg name="name" value="Berlin"/>
+    <constructor-arg name="boss" value="Robercik"/>
+</bean>
+
+    <bean id="matiWorld" class="pl.coderslab.spring.HelloWorld">
+        <constructor-arg value="Mati"/>
+        <property name="city" ref="Berlin"></property>
+    </bean>
 </beans>
